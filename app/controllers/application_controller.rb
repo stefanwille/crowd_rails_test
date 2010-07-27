@@ -1,10 +1,20 @@
-# Filters added to this controller apply to all controllers in the application.
-# Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  include Crowd::SingleSignOn
+
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
-  # Scrub sensitive parameters from your log
-  # filter_parameter_logging :password
+  before_filter :authenticate
+
+  private
+    def authenticate
+      return if RAILS_ENV == "test"
+
+      return if crowd_authenticated?
+
+      authenticate_or_request_with_http_basic('Demo Application') do |user_name, password|
+        crowd_authenticate(user_name, password)
+      end
+    end
 end

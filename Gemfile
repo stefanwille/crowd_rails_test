@@ -4,7 +4,6 @@ gem "sqlite3-ruby", :require => "sqlite3"
 
 # bundler requires these gems in all environments
 gem "crowd_rails", "0.5.11"
-gem "crowd-stefanwille", "0.5.11"
 
 group :development do
   # bundler requires these gems in development

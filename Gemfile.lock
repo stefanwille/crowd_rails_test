@@ -10,10 +10,6 @@ dependencies:
     version: ">= 0"
     require: 
     - sqlite3
-  crowd-stefanwille: 
-    group: 
-    - :default
-    version: = 0.5.11
   crowd_rails: 
     group: 
     - :default
@@ -45,7 +41,7 @@ specs:
     version: 2.3.8
 - sqlite3-ruby: 
     version: 1.3.1
-hash: 659dda1f967d5be9a8d6365c8e45a5143849439a
+hash: 24419f52582b5e6db5c4d3ba312d1c14458c5d20
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

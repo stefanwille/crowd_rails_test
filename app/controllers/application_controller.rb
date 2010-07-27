@@ -9,8 +9,6 @@ class ApplicationController < ActionController::Base
 
   private
     def authenticate
-      return if RAILS_ENV == "test"
-
       return if crowd_authenticated?
 
       authenticate_or_request_with_http_basic('Demo Application') do |user_name, password|

@@ -1,0 +1,47 @@
+= crowd_rails_test
+
+Demo application and test for the crowd_rails gem.
+
+
+== REQUIREMENTS:
+
+* gem crowd_rails
+* gem crowd-stefanwille
+* gem bundler
+* soap4r[http://dev.ctor.org/soap4r] v1.5.8
+* Atlassian Crowd server v2.0
+* Ruby v1.8.6 (or later)
+* Rails 2.3.8 (or later)
+
+== USE:
+
+Configure your Crowd server in config/initializers/crowd_setup.rb.
+Then run 
+
+  ruby script/server
+  
+and go to
+
+  http://localhost:3000
+  
+You will get a basic authentication box that is backed by your Crowd server.
+
+Assumptions (used above):
+
+* Crowd Server is on localhost, port 8095
+* There is an application configured in Crowd with name and password 'soaptest'
+* Application 'soaptest' directory set to 'True'
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2010 Stefan Wille. See LICENSE for details.
